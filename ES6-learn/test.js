@@ -86,9 +86,6 @@ var main = function() {
 main();
 
 
-
-
-
 // generator funcitons
 
 "use strict" 
@@ -230,12 +227,11 @@ console.log(`Message: ${fn()} !!`);
 
 //Message: Hello World !!
 
-var multiLine = ' 
-   This is 
+/*var multiLine ='This is 
    a string 
    with multiple 
    lines'; 
-console.log(multiLine);
+console.log(multiLine);*/
 
 // raw
 
@@ -250,3 +246,250 @@ console.log(raw_text)
 //World 
 //Hello \n World
 
+
+var map = new Map(); 
+map.set('name','Tutorial Point'); 
+map.get('name'); // Tutorial point
+
+// 1 is different from "1"
+var map = new Map(); 
+map.set(1,true); 
+console.log(map.has("1")); //false 
+
+map.set("1",true); 
+console.log(map.has("1")); //true
+// chainable
+var roles = new Map(); 
+roles.set('r1', 'User') 
+.set('r2', 'Guest') 
+.set('r3', 'Admin'); 
+console.log(roles.has('r1'))
+
+// overwrite the exsting value
+var roles = new Map([ 
+   ['r1', 'User'], 
+   ['r2', 'Guest'], 
+   ['r3', 'Admin'], 
+]);  
+console.log(`value of key r1 before set(): ${roles.get('r1')}`) 
+roles.set('r1','superUser') 
+console.log(`value of key r1 after set(): ${roles.get('r1')}`)
+
+//Example : Weak Map
+'use strict' 
+/*let weakMap = new WeakMap(); 
+let obj = {}; 
+console.log(weakMap.set(obj,"hello"));  
+console.log(weakMap.has(obj));// true*/
+
+// SET
+//Example 1: Set and Iterator
+var  set = new Set(['a','b','c','d','e']);  
+var iterator = set.entries(); 
+console.log(iterator.next())
+//The following output is displayed on successful execution of the above code.
+
+//{ value: [ 'a', 'a' ], done: false } 
+//Since, the set does not store key/value, the value array contains similar key and value. done will be false as there are more elements to be read.
+
+//Example 2: Set and Iterator
+var  set = new Set(['a','b','c','d','e']);  
+var iterator = set.values(); 
+console.log(iterator.next());
+//The following output is displayed on successful execution of the above code.
+
+//{ value: 'a', done: false }  
+//Example 3: Set and Iterator
+var  set = new Set(['a','b','c','d','e']);  
+var iterator = set.keys(); 
+console.log(iterator.next()); 
+//The following output is displayed on successful execution of the above code.
+
+//{ value: 'a', done: false }
+
+
+//MAP
+//Example 4: Map and Iterator
+var map = new Map([[1,'one'],[2,'two'],[3,'three']]); 
+var iterator = map.entries(); 
+console.log(iterator.next()); 
+//The following output is displayed on successful execution of the above code.
+
+//{ value: [ 1, 'one' ], done: false }  
+//Example 5: Map and Iterator
+var map = new Map([[1,'one'],[2,'two'],[3,'three']]); 
+var iterator = map.values(); 
+console.log(iterator.next());  
+//The following output is displayed on successful execution of the above code.
+
+//{value: "one", done: false} 
+//Example 6: Map and Iterator
+var map = new Map([[1,'one'],[2,'two'],[3,'three']]); 
+var iterator = map.keys(); 
+console.log(iterator.next());  
+//The following output is displayed on successful execution of the above code.
+
+//{value: 1, done: false}
+
+
+
+// CLASSES
+
+
+'use strict' 
+class Polygon { 
+   constructor(height, width) { 
+      this.h = height; 
+      this.w = width;
+   } 
+   test() { 
+      console.log("The height of the polygon: ", this.h) 
+      console.log("The width of the polygon: ",this. w) 
+   } 
+} 
+
+//creating an instance  
+var polyObj = new Polygon(10,20); 
+polyObj.test();
+
+
+//The Static Keyword
+//The static keyword can be applied to functions in a class. Static members are referenced by the class name.
+
+
+'use strict' 
+class StaticMem { 
+   static disp() { 
+      console.log("Static Function called") 
+   } 
+} 
+StaticMem.disp() //invoke the static method
+
+
+'use strict' 
+class Person{ } 
+var obj = new Person() 
+var isPerson = obj instanceof Person; 
+console.log(" obj is an instance of Person " + isPerson); 
+
+
+/ inheritance 
+'use strict' 
+class Shape { 
+   constructor(a) { 
+      this.Area = a
+   } 
+} 
+class Circle extends Shape { 
+   disp() { 
+      console.log("Area of the circle:  "+this.Area) 
+   } 
+} 
+var obj = new Circle(223); 
+obj.disp() 
+
+
+
+// multi level 
+
+'use strict' 
+class Root { 
+   test() { 
+      console.log("call from parent class") 
+   } 
+} 
+class Child extends Root {} 
+class Leaf extends Child   
+
+//indirectly inherits from Root by virtue of inheritance {} 
+var obj = new Leaf();
+obj.test();
+
+// method overloading
+
+'use strict' 
+class PrinterClass { 
+   doPrint() { 
+      console.log("doPrint() from Parent called… 
+   }  
+   class StringPrinter extends PrinterClass { 
+      doPrint() { 
+         console.log("doPrint() is printing a string…") 
+      } 
+   } 
+   var obj = new StringPrinter() 
+   obj.doPrint()
+}
+
+// super keyword
+
+'use strict' 
+class PrinterClass { 
+   doPrint() {
+      console.log("doPrint() from Parent called…") 
+   } 
+}  
+class StringPrinter extends PrinterClass { 
+   doPrint() { 
+      super.doPrint() 
+      console.log("doPrint() is printing a string…") 
+   } 
+} 
+var obj = new StringPrinter() 
+obj.doPrint()
+
+// Promises Async programming Callbacks
+
+function notifyAll(fnSms, fnEmail) {   
+      console.log('starting notification process');   
+      fnSms();   
+      fnEmail();   
+   }   
+   notifyAll(function() {   
+      console.log("Sms send ..");   
+   }, 
+   function() {   
+      console.log("email send ..");   
+   });   
+   console.log("End of script"); 
+   //executes last or blocked by other methods 
+
+
+// promise
+
+function getSum(n1, n2) {   
+   varisAnyNegative = function() {   
+      return n1 < 0 || n2 < 0;   
+   }   
+   var promise = new Promise(function(resolve, reject) {   
+      if (isAnyNegative()) {   
+         reject(Error("Negatives not supported"));   
+      }   
+      resolve(n1 + n2)
+   });   
+   return promise;   
+}
+
+
+getSum(5, 6)   
+.then(function (result) {   
+   console.log(result);   
+},   
+function (error) {   
+   console.log(error);   
+});
+
+
+
+//Example 1: Custom Error with default message
+function MyError(message) { 
+   this.name = 'CustomError'; 
+   this.message = message || 'Error raised with default message'; 
+} 
+try { 
+   //throw new MyError();
+    throw new MyError('Printing Custom Error message'); // EX 2
+} catch (e) {  
+   console.log(e.name);      
+   console.log(e.message);  // 'Default Message' 
+}
