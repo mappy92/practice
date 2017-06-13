@@ -1,0 +1,4 @@
+typeof undeclared = undefined
+typeof undefined = undefined
+Note that the typeof returns "undefined", therefore undefined is a primitive type.
+typeof nullVariable // "object"
