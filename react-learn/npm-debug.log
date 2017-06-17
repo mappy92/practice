@@ -1,0 +1,244 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'c:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Users\\Manpreet\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'babel-cli' ]
+2 info using npm@2.14.1
+3 info using node@v6.9.4
+4 verbose install initial load of c:\Program Files\nodejs\package.json
+5 verbose readDependencies loading dependencies from c:\Program Files\nodejs\package.json
+6 silly cache add args [ 'babel-cli', null ]
+7 verbose cache add spec babel-cli
+8 silly cache add parsed spec Result {
+8 silly cache add   raw: 'babel-cli',
+8 silly cache add   scope: null,
+8 silly cache add   name: 'babel-cli',
+8 silly cache add   rawSpec: '',
+8 silly cache add   spec: '*',
+8 silly cache add   type: 'range' }
+9 silly addNamed babel-cli@*
+10 verbose addNamed "*" is a valid semver range for babel-cli
+11 silly addNameRange { name: 'babel-cli', range: '*', hasData: false }
+12 silly mapToRegistry name babel-cli
+13 silly mapToRegistry using default registry
+14 silly mapToRegistry registry https://registry.npmjs.org/
+15 silly mapToRegistry uri https://registry.npmjs.org/babel-cli
+16 verbose addNameRange registry:https://registry.npmjs.org/babel-cli not in flight; fetching
+17 verbose request uri https://registry.npmjs.org/babel-cli
+18 verbose request no auth needed
+19 info attempt registry request try #1 at 12:14:32 PM
+20 verbose request id f22f8c1213790752
+21 http request GET https://registry.npmjs.org/babel-cli
+22 http 200 https://registry.npmjs.org/babel-cli
+23 silly get cb [ 200,
+23 silly get   { server: 'nginx/1.10.1',
+23 silly get     'content-type': 'application/json',
+23 silly get     'last-modified': 'Fri, 02 Jun 2017 08:58:23 GMT',
+23 silly get     etag: 'W/"593128af-1ab17"',
+23 silly get     'content-encoding': 'gzip',
+23 silly get     'cache-control': 'max-age=300',
+23 silly get     'content-length': '8111',
+23 silly get     'accept-ranges': 'bytes',
+23 silly get     date: 'Wed, 07 Jun 2017 06:46:41 GMT',
+23 silly get     via: '1.1 varnish',
+23 silly get     age: '9',
+23 silly get     connection: 'keep-alive',
+23 silly get     'x-served-by': 'cache-hhn1523-HHN',
+23 silly get     'x-cache': 'HIT',
+23 silly get     'x-cache-hits': '174',
+23 silly get     'x-timer': 'S1496818002.725820,VS0,VE0',
+23 silly get     vary: 'Accept-Encoding' } ]
+24 verbose get saving babel-cli to C:\Users\Manpreet\AppData\Roaming\npm-cache\registry.npmjs.org\babel-cli\.cache.json
+25 silly addNameRange number 2 { name: 'babel-cli', range: '*', hasData: true }
+26 silly addNameRange versions [ 'babel-cli',
+26 silly addNameRange   [ '6.0.0',
+26 silly addNameRange     '6.0.2',
+26 silly addNameRange     '6.0.12',
+26 silly addNameRange     '6.0.14',
+26 silly addNameRange     '6.0.15',
+26 silly addNameRange     '6.1.0',
+26 silly addNameRange     '6.1.1',
+26 silly addNameRange     '6.1.2',
+26 silly addNameRange     '6.1.4',
+26 silly addNameRange     '6.1.5',
+26 silly addNameRange     '6.1.6',
+26 silly addNameRange     '6.1.7',
+26 silly addNameRange     '6.1.8',
+26 silly addNameRange     '6.1.9',
+26 silly addNameRange     '6.1.10',
+26 silly addNameRange     '6.1.11',
+26 silly addNameRange     '6.1.12',
+26 silly addNameRange     '6.1.13',
+26 silly addNameRange     '6.1.14',
+26 silly addNameRange     '6.1.15',
+26 silly addNameRange     '6.1.16',
+26 silly addNameRange     '6.1.17',
+26 silly addNameRange     '6.1.18',
+26 silly addNameRange     '6.2.0',
+26 silly addNameRange     '6.2.4',
+26 silly addNameRange     '6.3.13',
+26 silly addNameRange     '6.3.15',
+26 silly addNameRange     '6.3.17',
+26 silly addNameRange     '6.4.0',
+26 silly addNameRange     '6.4.5',
+26 silly addNameRange     '6.5.0',
+26 silly addNameRange     '6.5.0-1',
+26 silly addNameRange     '6.5.1',
+26 silly addNameRange     '6.6.0',
+26 silly addNameRange     '6.6.4',
+26 silly addNameRange     '6.6.5',
+26 silly addNameRange     '6.7.5',
+26 silly addNameRange     '6.7.7',
+26 silly addNameRange     '6.8.0',
+26 silly addNameRange     '6.9.0',
+26 silly addNameRange     '6.10.0',
+26 silly addNameRange     '6.10.1',
+26 silly addNameRange     '6.11.4',
+26 silly addNameRange     '6.14.0',
+26 silly addNameRange     '6.16.0',
+26 silly addNameRange     '6.18.0',
+26 silly addNameRange     '6.22.0',
+26 silly addNameRange     '6.22.1',
+26 silly addNameRange     '6.22.2',
+26 silly addNameRange     '6.23.0',
+26 silly addNameRange     '7.0.0-alpha.1',
+26 silly addNameRange     '7.0.0-alpha.2',
+26 silly addNameRange     '6.24.0',
+26 silly addNameRange     '7.0.0-alpha.3',
+26 silly addNameRange     '7.0.0-alpha.4',
+26 silly addNameRange     '7.0.0-alpha.6',
+26 silly addNameRange     '7.0.0-alpha.7',
+26 silly addNameRange     '6.24.1',
+26 silly addNameRange     '7.0.0-alpha.8',
+26 silly addNameRange     '7.0.0-alpha.9',
+26 silly addNameRange     '7.0.0-alpha.10',
+26 silly addNameRange     '7.0.0-alpha.11',
+26 silly addNameRange     '7.0.0-alpha.12' ] ]
+27 silly addNamed babel-cli@6.24.1
+28 verbose addNamed "6.24.1" is a plain semver version for babel-cli
+29 silly mapToRegistry name babel-cli
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/babel-cli
+33 verbose addRemoteTarball https://registry.npmjs.org/babel-cli/-/babel-cli-6.24.1.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/babel-cli/-/babel-cli-6.24.1.tgz',
+34 verbose addRemoteTarball   '207cd705bba61489b2ea41b5312341cf6aca2283' ]
+35 info retry fetch attempt 1 at 12:14:33 PM
+36 info attempt registry request try #1 at 12:14:33 PM
+37 http fetch GET https://registry.npmjs.org/babel-cli/-/babel-cli-6.24.1.tgz
+38 http fetch 200 https://registry.npmjs.org/babel-cli/-/babel-cli-6.24.1.tgz
+39 silly fetchAndShaCheck shasum 207cd705bba61489b2ea41b5312341cf6aca2283
+40 verbose addTmpTarball C:\Users\Manpreet\AppData\Local\Temp\npm-7748-65d74fdf\registry.npmjs.org\babel-cli\-\babel-cli-6.24.1.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for babel-cli@6.24.1
+42 silly cache afterAdd babel-cli@6.24.1
+43 verbose afterAdd C:\Users\Manpreet\AppData\Roaming\npm-cache\babel-cli\6.24.1\package\package.json not in flight; writing
+44 verbose afterAdd C:\Users\Manpreet\AppData\Roaming\npm-cache\babel-cli\6.24.1\package\package.json written
+45 silly install resolved [ { name: 'babel-cli',
+45 silly install resolved     version: '6.24.1',
+45 silly install resolved     description: 'Babel command line.',
+45 silly install resolved     author: { name: 'Sebastian McKenzie', email: 'sebmck@gmail.com' },
+45 silly install resolved     homepage: 'https://babeljs.io/',
+45 silly install resolved     license: 'MIT',
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'https://github.com/babel/babel/tree/master/packages/babel-cli' },
+45 silly install resolved     keywords:
+45 silly install resolved      [ '6to5',
+45 silly install resolved        'babel',
+45 silly install resolved        'es6',
+45 silly install resolved        'transpile',
+45 silly install resolved        'transpiler',
+45 silly install resolved        'babel-cli',
+45 silly install resolved        'compiler' ],
+45 silly install resolved     dependencies:
+45 silly install resolved      { 'babel-core': '^6.24.1',
+45 silly install resolved        'babel-register': '^6.24.1',
+45 silly install resolved        'babel-polyfill': '^6.23.0',
+45 silly install resolved        'babel-runtime': '^6.22.0',
+45 silly install resolved        commander: '^2.8.1',
+45 silly install resolved        'convert-source-map': '^1.1.0',
+45 silly install resolved        'fs-readdir-recursive': '^1.0.0',
+45 silly install resolved        glob: '^7.0.0',
+45 silly install resolved        lodash: '^4.2.0',
+45 silly install resolved        'output-file-sync': '^1.1.0',
+45 silly install resolved        'path-is-absolute': '^1.0.0',
+45 silly install resolved        slash: '^1.0.0',
+45 silly install resolved        'source-map': '^0.5.0',
+45 silly install resolved        v8flags: '^2.0.10',
+45 silly install resolved        chokidar: '^1.6.1' },
+45 silly install resolved     optionalDependencies: { chokidar: '^1.6.1' },
+45 silly install resolved     devDependencies: { 'babel-helper-fixtures': '^6.22.0' },
+45 silly install resolved     bin:
+45 silly install resolved      { 'babel-doctor': './bin/babel-doctor.js',
+45 silly install resolved        babel: './bin/babel.js',
+45 silly install resolved        'babel-node': './bin/babel-node.js',
+45 silly install resolved        'babel-external-helpers': './bin/babel-external-helpers.js' },
+45 silly install resolved     _id: 'babel-cli@6.24.1',
+45 silly install resolved     scripts: {},
+45 silly install resolved     _shasum: '207cd705bba61489b2ea41b5312341cf6aca2283',
+45 silly install resolved     _from: 'babel-cli@*',
+45 silly install resolved     _npmVersion: '3.10.10',
+45 silly install resolved     _nodeVersion: '6.9.0',
+45 silly install resolved     _npmUser: { name: 'hzoo', email: 'hi@henryzoo.com' },
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '207cd705bba61489b2ea41b5312341cf6aca2283',
+45 silly install resolved        tarball: 'https://registry.npmjs.org/babel-cli/-/babel-cli-6.24.1.tgz' },
+45 silly install resolved     maintainers: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+45 silly install resolved     _npmOperationalInternal:
+45 silly install resolved      { host: 'packages-12-west.internal.npmjs.com',
+45 silly install resolved        tmp: 'tmp/babel-cli-6.24.1.tgz_1491578392036_0.8922712448984385' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/babel-cli/-/babel-cli-6.24.1.tgz' } ]
+46 info install babel-cli@6.24.1 into c:\Program Files\nodejs
+47 info installOne babel-cli@6.24.1
+48 verbose installOne of babel-cli to c:\Program Files\nodejs not in flight; installing
+49 verbose lock using C:\Users\Manpreet\AppData\Roaming\npm-cache\_locks\babel-cli-643480e3a84fa112.lock for c:\Program Files\nodejs\node_modules\babel-cli
+50 silly install write writing babel-cli 6.24.1 to c:\Program Files\nodejs\node_modules\babel-cli
+51 verbose unbuild node_modules\babel-cli
+52 silly gentlyRm c:\Program Files\nodejs\node_modules\babel-cli is being purged from base c:\Program Files\nodejs
+53 verbose gentlyRm don't care about contents; nuking c:\Program Files\nodejs\node_modules\babel-cli
+54 verbose tar unpack C:\Users\Manpreet\AppData\Roaming\npm-cache\babel-cli\6.24.1\package.tgz
+55 verbose tar unpacking to c:\Program Files\nodejs\node_modules\babel-cli
+56 silly gentlyRm c:\Program Files\nodejs\node_modules\babel-cli is being purged
+57 verbose gentlyRm don't care about contents; nuking c:\Program Files\nodejs\node_modules\babel-cli
+58 silly gunzTarPerm modes [ '777', '666' ]
+59 error tar.unpack untar error C:\Users\Manpreet\AppData\Roaming\npm-cache\babel-cli\6.24.1\package.tgz
+60 verbose unlock done using C:\Users\Manpreet\AppData\Roaming\npm-cache\_locks\babel-cli-643480e3a84fa112.lock for c:\Program Files\nodejs\node_modules\babel-cli
+61 verbose fstream_path c:\Program Files\nodejs\node_modules\babel-cli
+62 verbose fstream_type Directory
+63 verbose fstream_class DirWriter
+64 verbose stack Error: EPERM: operation not permitted, mkdir 'c:\Program Files\nodejs\node_modules\babel-cli'
+64 verbose stack     at Error (native)
+65 verbose fstream_stack C:\Users\Manpreet\AppData\Roaming\npm\node_modules\npm\node_modules\fstream\lib\dir-writer.js:35:25
+65 verbose fstream_stack C:\Users\Manpreet\AppData\Roaming\npm\node_modules\npm\node_modules\mkdirp\index.js:47:53
+65 verbose fstream_stack FSReqWrap.oncomplete (fs.js:123:15)
+66 verbose cwd d:\myprac\react-learn
+67 error Windows_NT 6.1.7601
+68 error argv "c:\\Program Files\\nodejs\\node.exe" "C:\\Users\\Manpreet\\AppData\\Roaming\\npm\\node_modules\\npm\\bin\\npm-cli.js" "install" "-g" "babel-cli"
+69 error node v6.9.4
+70 error npm  v2.14.1
+71 error path c:\Program Files\nodejs\node_modules\babel-cli
+72 error code EPERM
+73 error errno -4048
+74 error syscall mkdir
+75 error Error: EPERM: operation not permitted, mkdir 'c:\Program Files\nodejs\node_modules\babel-cli'
+75 error     at Error (native)
+75 error  { Error: EPERM: operation not permitted, mkdir 'c:\Program Files\nodejs\node_modules\babel-cli'
+75 error     at Error (native)
+75 error   errno: -4048,
+75 error   code: 'EPERM',
+75 error   syscall: 'mkdir',
+75 error   path: 'c:\\Program Files\\nodejs\\node_modules\\babel-cli',
+75 error   fstream_type: 'Directory',
+75 error   fstream_path: 'c:\\Program Files\\nodejs\\node_modules\\babel-cli',
+75 error   fstream_class: 'DirWriter',
+75 error   fstream_stack:
+75 error    [ 'C:\\Users\\Manpreet\\AppData\\Roaming\\npm\\node_modules\\npm\\node_modules\\fstream\\lib\\dir-writer.js:35:25',
+75 error      'C:\\Users\\Manpreet\\AppData\\Roaming\\npm\\node_modules\\npm\\node_modules\\mkdirp\\index.js:47:53',
+75 error      'FSReqWrap.oncomplete (fs.js:123:15)' ] }
+76 error Please try running this command again as root/Administrator.
+77 verbose exit [ -4048, true ]
+78 verbose unbuild node_modules\babel-cli
+79 silly gentlyRm c:\Program Files\nodejs\node_modules\babel-cli is being purged from base c:\Program Files\nodejs
+80 verbose gentlyRm don't care about contents; nuking c:\Program Files\nodejs\node_modules\babel-cli
