@@ -1,1 +1,5 @@
-closures :
+Closures :
+1. Closures have access to the outer function’s variable even after the outer function returns
+2. Closures store references to the outer function’s variables
+3. Closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop.
+4. At any point in time, there can only be one execution context running. That’s why JavaScript is “single threaded,” meaning only one command can be processed at a time. Typically, browsers maintain this execution context using a “stack.”

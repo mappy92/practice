@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <script>
+            function showName (firstName, lastName) {
+                var nameIntro = "Your name is ";
+                    // this inner function has access to the outer function's variables, including the parameter
+                function makeFullName () {
+                return nameIntro + firstName + " " + lastName;
+                }
+
+                return makeFullName ();
+                }
+                console.log(showName("Michael", "Jackson")); // Your name is Michael Jackson
+
+
+
+                function celebrityName (firstName) {
+                    var nameIntro = "This celebrity is ";
+                    // this inner function has access to the outer function's variables, including the parameter
+                   function lastName (theLastName) {
+                        return nameIntro + firstName + " " + theLastName;
+                    }
+                    return lastName;
+                }
+
+                var mjName = celebrityName ("Michael"); // At this juncture, the celebrityName outer function has returned.
+                console.log(mjName);
+
+                // The closure (lastName) is called here after the outer function has returned above
+                // Yet, the closure still has access to the outer function's variables and parameter
+                mjName ("Jackson"); // This celebrity is Michael Jackson
+
+
+
+
+            function celebrityId(){
+                var id = 999;
+
+                return {
+                    setId : function(newId){
+                         id = newId ;
+                    },
+                    getId : function (){
+                    return id;
+                }
+                }
+            }
+
+             var mjid = celebrityId();
+
+            console.log(mjid.getId());
+            mjid.setId(9090);
+            console.log(mjid.getId());
+
+
+
+            function celebsIdGenerator(celebArr){
+                var uniqueId = 100;
+                var i;
+
+                /*for(i=0;i<celebArr.length;i++){
+                    console.log(celebArr.length);
+                    celebArr[i].id = function(){
+                    console.log(i);
+                    return uniqueId+i;
+                    }
+                }
+                return celebArr;*/
+
+                for(i=0;i<celebArr.length;i++){
+
+                    celebArr[i].id = function(j){
+                        return function(){
+                            return uniqueId+j;
+                        }()
+                    }(i)
+                }
+                return celebArr;
+            }
+
+            var actionCelebs = [{name:"Stallone", id:0}, {name:"Cruise", id:0}, {name:"Willis", id:0}];
+
+            var celebUniqueArr = celebsIdGenerator(actionCelebs);
+console.log(celebUniqueArr);
+            var stalone = celebUniqueArr[0];
+            console.log(stalone.id);// i is 3 at time of calling this
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </script>
+    </head>
+</html>
