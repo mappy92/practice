@@ -1,0 +1,46 @@
+Method 1
+
+(this was my original answer to the question)
+
+A = [];
+This code will set the variable A to a new empty array. This is perfect if you don't have references to the original array A anywhere else because this actually creates a brand new (empty) array. You should be careful with this method because if you have referenced this array from another variable or property, the original array will remain unchanged. Only use this if you only reference the array by its original variable A.
+
+This is also the fastest solution.
+
+This code sample shows the issue you can encounter when using this method:
+
+var arr1 = ['a','b','c','d','e','f'];
+var arr2 = arr1;  // Reference arr1 by another variable
+arr1 = [];
+console.log(arr2); // Output ['a','b','c','d','e','f']
+Method 2 (as suggested by Matthew Crumley)
+
+A.length = 0
+This will clear the existing array by setting its length to 0. Some have argued that this may not work in all implementations of JavaScript, but it turns out that this is not the case. It also works when using "strict mode" in ECMAScript 5 because the length property of an array is a read/write property.
+
+Method 3 (as suggested by Anthony)
+
+A.splice(0,A.length)
+Using .splice() will work perfectly, but since the .splice() function will return an array with all the removed items, it will actually return a copy of the original array. Benchmarks suggest that this has no effect on performance whatsoever.
+
+Method 4 (as suggested by tanguy_k)
+
+while(A.length > 0) {
+    A.pop();
+}
+This solution is not very succinct, and it is also the slowest solution, contrary to earlier benchmarks referenced in the original answer.
+
+Performance
+
+Of all the methods of clearing an existing array, methods 2 and 3 are very similar in performance and are a lot faster than method 4. See this benchmark.
+
+As pointed out by Diadistis in their answer below, the original benchmarks that were used to determine the performance of the four methods described above were flawed. The original benchmark reused the cleared array so the second iteration was clearing an array that was already empty.
+
+The following benchmark fixes this flaw: http://jsben.ch/#/hyj65. It clearly shows that methods #2 (length property) and #3 (splice) are the fastest (not counting method #1 which doesn't change the original array).
+
+This has been a hot topic and the cause of a lot of controversy. There are actually many correct answers and because this answer has been marked as the accepted answer for a very long time, I will include all of the methods here. If you vote for this answer, please upvote the other answers that I have referenced as well.
+
+
+
+
+contrary

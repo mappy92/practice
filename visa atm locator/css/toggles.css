@@ -1,0 +1,68 @@
+.visaATMToggleContent{
+	position: relative;
+	display: inline-block !important;
+	}
+
+.visaATMToggle {
+  border-top: solid 1px #ccc;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* override for specific pages */
+.visaATMPage-results .visaATMToggle {
+  border-top: none;
+}
+
+.visaATMToggleFirst {
+  border-top: none;
+}
+
+.visaATMToggler {
+  cursor: pointer;
+  background: url(../img/sprites.png) no-repeat -25px -150px;
+  padding: 5px 0 5px 32px;
+  cursor: pointer;
+}
+
+.visaATMPage-results .visaATMToggler {
+  color: #7f91cf;
+  background-position: -16px -578px;
+  padding: 5px 0 10px 20px;
+  margin: 0 0 0 13px;
+}
+
+.visaATMPage-results .visaATMTogglee {
+	padding: 1%;
+	width: 98%;
+	/*height: 125px;*/
+  height: 175px;
+	background-color: white;
+	-webkit-box-shadow: 0px 6px 10px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow: 0px 6px 10px rgba(50, 50, 50, 0.75);
+	box-shadow: 0px 6px 10px rgba(50, 50, 50, 0.75);
+}
+
+.visaATMPage-results .visaATMTogglerToggled {
+  background-position: -16px -539px;
+}
+
+.visaATMTogglee {
+  overflow: hidden;
+}
+
+.visaATMTogglee p {
+  margin: 0;
+  padding: 20px;
+  padding-left: 32px;
+  background: #f2f2f2;
+}
+
+.visaATMTogglerToggled{
+  background-position: -25px -221px;
+}
+
+.visaATMFaqLegend { padding: 20px 20px 0 25px; }

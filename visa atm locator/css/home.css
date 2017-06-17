@@ -1,0 +1,99 @@
+/* background image on home page */
+/* .visaATMPage-home .visaATMContent {
+	background: url('../img/map_bg.jpg') no-repeat left top;
+	background-size: 770px 292px;
+} */
+
+.visaATMPage-home .visaATMPage {
+	margin-top: 10px;
+	border : none;
+	width: 100%;
+	background-color: transparent;
+	padding-top: 0;
+	border: none;
+}
+
+.visaATMPage-home .visaATMFooter {
+	border-top: none;
+}
+
+.visaATMMap {
+	float: left;
+}
+
+/* .LoadingImage a {
+	background:url('../img/ajax-loader.gif');
+	height: 400px;
+	width: 400px;
+	position: absolute;
+	top: 50%;
+	left: 35%;
+	z-index: 99999;
+}
+ *//* .visaATMTitle {
+  font-size: 48px;
+  color: #0023a0;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 25px;
+} */
+
+/* .visaATMPage-home .visaATMSearch {
+  top: 225px;
+  left: 145px;
+  color: #000;
+} */
+.visaATMPage-home ,.visaATMPage-results
+{
+	margin: auto;
+    width: 1265px; 
+}
+.visaATMPage-home .visaATMContent {
+  	background: url("../img/bottom-shaddow.gif") repeat-x scroll center bottom transparent;
+    float: left;
+    padding-bottom: 8px;
+}
+
+.visaATMHomeLinks {
+  padding: 16px 0;
+  float: right;
+  overflow: hidden;
+}
+
+.visaATMHomeLinks a {
+  font-weight: bold;
+  display: block;
+  padding-left: 10px;
+  text-decoration: none;
+  color: #666;
+  background: url(../img/arrow_bullet.png) no-repeat left 5px;
+}
+
+.visaATMHomeLinks a:hover {
+  text-decoration: underline;
+}
+
+.visaATMHomeLinks li {
+  float: left;
+  padding: 0px 16px;
+  line-height: 20px;
+  background: url(../img/sprites.png) no-repeat right top;
+}
+
+.visaATMHomeLinks .last {
+  background: none;
+  padding-right: 0;
+}
+
+.visaATMPage-home .visaATMNavHomeShow {display: list-item;}
+
+.filterbg
+{
+	background: url("../img/header-strip.png") repeat-x scroll 0 0 transparent;
+    height: 65px;
+    position: relative;
+    left:0px;
+    top: 0px;
+    width: 1260px;
+    z-index: 4;
+}

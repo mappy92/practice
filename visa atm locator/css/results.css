@@ -1,0 +1,535 @@
+.visaATMPage-results .filterbg{position:absolute;}
+.visaATM_InfoBox {
+	border: 1px solid #CCC;
+	position: relative;
+	width: 250px;
+	padding: 10px;
+	background: url("../img/background_white_trans_60.png") repeat transparent;
+	top: -21px;
+	left: 0px;
+	font-size: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	z-index:9999 !important;
+	
+	cursor: -webkit-grab; 
+	cursor: -moz-grab;
+}
+
+.visaATM_InfoBox h2 { color: #000; font-size: 12px; font-weight: bold; }
+.visaATM_InfoBoxInfo { background: url('../img/background_ccc_trans_40.png') repeat transparent; color: #000; padding: 0px; }
+.visaATM_InfoBoxInfo img { float: right; }
+.visaATM_InfoBox p { margin: 0 !important; }
+.visaATM_InfoBoxDistance { font-weight: bold; color: #000; }
+.visaATM_InfoBoxPlaceName { color: #0023A0; }
+.visaATM_InfoBox ul li { margin-left: 0 !important; border-right: 0 !important; }
+.MicrosoftMap .hide { display: none !important; }
+.visaATMPage-results .visaATMPage { width: auto; border: none; *display: inline-block; }
+.visaATMResultsInfo { background: none repeat scroll 0 0 #FCFBFA; border: 1px solid #E1E0E0; float: left; left: 0px; margin-right: 10px; position: absolute; top: 75px; width: 370px; height: 648px; z-index: 2; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;-webkit-box-shadow: 4px -3px 10px rgba(50, 50, 50, 0.36); -moz-box-shadow: 4px -3px 10px rgba(50, 50, 50, 0.36); box-shadow: 4px -3px 10px rgba(50, 50, 50, 0.36);}
+/* .visaAtmInfoBoxCrossButton{ float: right; height: 20px; margin: -15px -15px 0 0; cursor: pointer;} */
+.visaAtmInfoBoxCrossButton{ height:13px; width:13px; float:right; position:absolute; top:10px; right:10px;}
+.animate { display: none !important; }
+.visaATMResultListItem { cursor: deafult; padding: 15px 5px 5px 45px; list-style: none; position: relative; }
+.visaATMResultListItem.noClick { cursor: default !important; }
+.visaATMPlaceLink { text-decoration: none; }
+.visaATMResultListItem:hover .visaATMPlaceLink { text-decoration: none; }
+.visaATMResultListItem.noClick:hover .visaATMPlaceLink {cursor: default !important; }
+.visaATMResultListItem:last-child { border-bottom: none; }
+.visaATMResultsInfo p { margin: 0; padding: 0; }
+.visaATMResultsInfo p.visaATMHoursOfOperation { font-style: italic; margin: 0 0 10px 0; }
+.visaATMResultsInfo ol { height: 500px; overflow: auto; margin-top: 20px; position: relative; }
+.visaATMBlend { background: url("../img/blendbgbankfilters.png") repeat-x scroll 0 top transparent; height: 23px; left: 22px; position: absolute; top: 198px; width: 270px; z-index: 2;}
+.toggleButtonLeft {  
+	background: url("../img/arrow-toggle.png") no-repeat scroll 0 0 transparent;
+    height: 30px;
+    left: 358px;
+    position: absolute;
+    top: 80px;
+    width: 30px;
+    z-index: 3;}
+    
+.toggleButtonRight {  
+	background: url("../img/collapsed.png") no-repeat scroll 0 0 transparent;
+    height: 41px;
+    left: 0;
+    position: absolute;
+    top: 76px;
+    width: 30px;
+    z-index: 3; }
+.toggleButtonRight a{
+	height: 32px !important;
+    width: 24px !important;
+}
+.visaATMScore { font-weight: bold; }
+.visaATMAddress { font-size: 12px; }
+.visaATMResultsMap { 
+	float: left; 
+	margin-top: -8px;
+	width: 1264px;
+	height: 730px;
+}
+.visaATMResultsDirections { padding-left: 20px; }
+.visaATMResultsDirections .hide { display: none; }
+.visaATMDetails {font-size: 16px; font-weight: bold; margin-left: -32px !important;}
+.visaATMDirection{font-size: 16px; font-weight: bold; margin-left: -10px !important;}
+.visaATMControlIcons { width: 250px; margin-top: -2px; position: absolute; right: 20px; top: 15px; z-index: 5; }
+.visaATMControlIcons a { text-decoration: none; color: #7f91cf; font-size: 12px; padding-left: 20px; padding-top: 2px; padding-bottom: 4px; display: list-item; float: right; list-style: none; white-space: nowrap; height: 12px; background: url('../img/results_icons_sprite.png') no-repeat 0 0; }
+.visaATMControlIcons a:hover { text-decoration: none; }
+.visaATMControlIcons .visaATMSendResults { background-position: 0 -20px; display: none;}
+.visaATMControlIcons img { color: #666; }
+
+.miles button span.visaATMSortCurrent{ background: url("../img/sprites.png") no-repeat scroll -22px -1122px transparent; cursor: default;}
+.kilometers button span.visaATMSortCurrent{background: url("../img/sprites.png") no-repeat scroll -22px -1160px transparent; cursor: default;}
+.visaATMControlLinks { 
+	width: 60px; 
+	color: #CCC; 
+	right: 132px; 
+	*right: 148px; 
+	position: absolute; 
+	top: 25px; 
+	z-index: 4; }
+.miles,
+.kilometers { float: left; width: 26px; }
+.miles button,
+.kilometers button { border: none; background: none; cursor: pointer; float: left; border: none; margin: 0; padding: 0; width: 28px; cursor: pointer; float: left; }
+.miles button span { background: url("../img/sprites.png") no-repeat scroll -22px -1101px transparent; float: left; height: 21px; text-indent: -999999px; width: 47px; margin: 0; padding: 0; }
+.kilometers button span { background: url("../img/sprites.png") no-repeat scroll -22px -1181px transparent; float: left; height: 21px; text-indent: -999999px; width: 28px; margin: 0; padding: 0; }
+.visaATMControlLinks button span { font-size: 12px; font-weight: bold; color: #0023A0; }
+.visaATMControlLinks button:focus,
+.visaATMControlLinks button span:focus { outline: 0; }
+.visaATMControlLinks button span.visaATMSortCurrent { cursor: default; }
+
+/* street and ariel view */
+.visaATMViewLinks { width: 90px; color: #CCC; right: 200px; *right: 216px; position: absolute; top: 25px; z-index: 4; }
+.street button span.visaATMSortCurrent{ background: url("../img/sprites.png") no-repeat scroll -3px -1247px transparent; cursor: default;}
+.ariel button span.visaATMSortCurrent{background: url("../img/sprites.png") no-repeat scroll -9px -1331px transparent; cursor: default;}
+.street,
+.ariel { float: left; width: 43px; }
+.street button,
+.ariel button { border: none; background: none; cursor: pointer; float: left; border: none; margin: 0; padding: 0; width: 43px; cursor: pointer; float: left; }
+.street button span { background: url("../img/sprites.png") no-repeat scroll -3px -1268px transparent; float: left; height: 21px; text-indent: -999999px; width: 47px; margin: 0; padding: 0; }
+.ariel button span { background: url("../img/sprites.png") no-repeat scroll -9px -1310px transparent; float: left; height: 21px; text-indent: -999999px; width: 47px; margin: 0; padding: 0; }
+.visaATMViewLinks button { 
+	border: none; 
+	cursor: pointer; 
+	}
+	
+.visaATMViewLinks button span { 
+	font-size: 12px;
+	font-weight: bold;
+	color: #0023A0; }
+
+.visaATMViewLinks button:focus, .visaATMControlLinks button span:focus {
+	outline: 0;
+}
+
+.visaATMViewLinks button span.visaATMSortCurrent {
+	cursor: default;
+}
+
+
+.visaATMDirectionType { width: 150px; height: 26px; float: left; padding: 0 !important; margin-top: 7px !important; }
+.visaATMDirectionType li { list-style-type: none; background: url(../img/shellDirections.png) no-repeat transparent 0px 30px; width: 31px; height: 26px; float: left; margin: 0; padding: 0; text-indent: -9999px; }
+.visaATMDirectionType .visaATMDrivingDirections { background-position: 0px -108px; }
+.visaATMDirectionType .visaATMDrivingDirections.current { background-position: 0px -135px; }
+.visaATMDirectionType .visaATMBusDirections { background-position: 0px -27px; }
+.visaATMDirectionType .visaATMBusDirections.current { background-position: 0px -81px; }
+.visaATMDirectionType .visaATMWalkingDirections { background-position: 0px 0px; }
+.visaATMDirectionType .visaATMWalkingDirections.current { background-position: 0px -54px; }
+.visaATMDirectionsGo button { background: transparent url('../img/btn_go_bg.png') repeat-x top left; height: 25px; font-weight: bold; color: #FFF; padding: 1px 10px 5px 10px; border: none; position: relative; float: right; border-radius: 5px; font-size: 14px; }
+.visaATMRouteInfo { padding: 10px; background-color: #ebebeb; margin-bottom: 10px; font-size: 12px; color: #000; }
+.visaATMRouteInfo span { color: #629b00; font-weight: bold; }
+.visaATMPrintPage { margin-right: 15px; }
+.MicrosoftMap{}
+.visaATMFilters { left: 0px; width: 100%; margin-bottom: 10px; overflow: visible; padding-bottom: 10px; position: relative; top: 21px; z-index: 4; min-height: 53px;}
+.visaATMFilters h5.title {
+	display: inline-block;
+}
+.visaATMFilters .filterAndOrToggle {
+	display: inline-block;
+	margin-left: 30px;
+}
+.visaATMFilters .filterAndOrToggle label {
+	background: none;
+	display: inline-block;
+	padding: 0 20px 0 0;
+	font-size: 12px;
+
+	text-indent: 0;
+	padding-left: 0;
+}
+.visaATMFilters .filterAndOrToggle label input {
+	margin-right: 8px;
+}
+.visaATMFilters ul { padding: 0; margin: 0; }
+.visaATMFilters li { 
+	font-size: 12px; 
+	float: left !important; 
+	width: 220px; 
+	margin-right: 5px; 
+	list-style: none; 
+	line-height: 1.2;
+
+	min-height: 36px;
+	max-height: 36px;
+}
+.visaATMFiltersByBank{ width: 285px; float: left; border-right: dotted 1px; padding: 10px; padding-top: 0px;}
+.visaATMFiltersByAttribute{ width: 900px; float: left; padding: 0 0 0 30px;}
+.visaATMFiltersByBank label input { margin-right:15px !important;}
+.visaATMFiltersByBank label {
+	padding: 8px 0 !important ;
+	background: none !important;
+	text-indent: 0 !important;
+}
+.visaATMBankNameListInner{}
+.visaATMBankNameList { height: 135px; margin-bottom: 15px; overflow-x: hidden; overflow-y: scroll;}
+
+.visaATMFilters .visaATMBankNameList li {
+	width: 260px;
+	min-height: auto;
+}
+/* hide some things unless printing */
+.visaATM_FilterImage,
+.visaATM_printFooterLogo,
+.visaATM_DirectionsImage,
+.visaATM_PrintSpan { display: none; }
+.visaATMFilters label { 
+	display: block; 
+	white-space: nowrap; 
+	padding: 8px 0px 4px 0px; 
+	background-image: url(../img/sprites.png); 
+	background-repeat: no-repeat; 
+	cursor: pointer; 
+
+	white-space: normal;
+    text-indent: -51px;
+    padding-left: 51px;
+    line-height: 1;
+}
+.visaATMFilters label.disabled,
+.visaATMFilters label.disabled:hover { display: none !important; visibilty: hidden !important; overflow: hidden; color: #999; cursor: default; }
+.visaATMFilters label:hover { color: #000; }
+.visaATMFilters label input { margin-right: 36px; }
+.visaATMWHEELCHAIR { 
+	background-image: url(../img/amenities/WHEELCHAIR.jpg) !important;
+	background-position: 15px 3px; 
+}
+.visaATMOPER_HRS { background-position: 6px -375px; }
+.visaATMBRAILLE_AUDIO { background-position: 6px -462px; }
+.visaATMACCEPTS_PLUS_SHARED_DEPOSIT { 
+	background-image: url(../img/amenities/ACCEPTS_PLUS_SHARED_DEPOSIT.jpg) !important;
+	background-position: 15px 5px; 
+}
+.visaATMBALANCE_INQUIRY { background-position: 6px -403px; }
+.visaATMPIN_CHANGE { background-position: 6px -489px; }
+.visaATMPLUS_ALLIANCE_NO_SURCHARGE_FEE { background-position: 6px -342px; }
+.visaATMV_PAY_CAPABLE { background-position: 6px -432px; }
+.visaATMREADY_LINK { background-position: -8px -1209px; }
+.visaATMAIRPORT_CD { background-position: 6px -514px; }
+.visaATMCHIP_CAPABLE { 
+	background-image: url(../img/amenities/CHIP_CAPABLE.jpg) !important;
+	background-position: 15px 3px; 
+}
+.disabled.visaATMWHEELCHAIR { background-position: 6px -834px; }
+.disabled.visaATMOPER_HRS { background-position: 6px -919px; }
+.disabled.visaATMBRAILLE_AUDIO { background-position: 6px -1006px; }
+.disabled.visaATMACCEPTS_PLUS_SHARED_DEPOSIT { background-position: 6px -860px; }
+.disabled.visaATMBALANCE_INQUIRY { background-position: 6px -946px; }
+.disabled.visaATMPIN_CHANGE { background-position: 6px -1032px; }
+.disabled.visaATMPLUS_ALLIANCE_NO_SURCHARGE_FEE { background-position: 6px -888px; }
+.disabled.visaATMV_PAY_CAPABLE { background-position: 6px -976px; }
+.disabled.visaATMAIRPORT_CD { background-position: 6px -1058px; }
+.disabled.visaATMREADY_LINK { background-position: -8px -1239px; }
+.visaATMAmenitiesDiv {float: left; width: 294px; border-bottom: 2px dotted #cccccc; }
+.visaATMAmenities { /* padding: 0 0 14px 0 !important; */ width: 250px !important; padding-left: 0 !important; }
+.visaATMAmenities li { float: left; width: 31px; height: 21px; background-image: url(../img/sprites.png); background-repeat: no-repeat; text-indent: -9999px; margin-left: 10px; margin-bottom: 10px; border-right: 1px solid #CCC; list-style: none; display: block; }
+.visaATMDrivingPlace .visaATMAmenities li { border-right: 0; margin-left: 0; }
+.visaATMAmenities li:first-child { margin-left: 0 !important; }
+.visaATMAmenities li:last-child { border-right: 0; }
+.visaATMAmenities_Title { text-indent: 0px !important; width: auto !important; padding-right: 10px; }
+.visaATMAmenities .visaATMWHEELCHAIR { 
+	background-image: url(../img/sprites.png) !important;
+	background-position: -15px -294px; 
+}
+.visaATMAmenities .visaATMOPER_HRS { background-position: -15px -380px; }
+.visaATMAmenities .visaATMBRAILLE_AUDIO { background-position: -15px -468px; }
+.visaATMAmenities .visaATMACCEPTS_PLUS_SHARED_DEPOSIT { 
+	background-image: url(../img/sprites.png) !important;
+	background-position: -15px -323px; 
+}
+.visaATMAmenities .visaATMBALANCE_INQUIRY { background-position: -15px -408px; }
+.visaATMAmenities .visaATMPIN_CHANGE { background-position: -15px -494px; }
+.visaATMAmenities .visaATMPLUS_ALLIANCE_NO_SURCHARGE_FEE { background-position: -10px -345px; width: 39px; }
+.visaATMAmenities .visaATMV_PAY_CAPABLE { background-position: -15px -436px; }
+.visaATMAmenities .visaATMAIRPORT_CD { background-position: -15px -520px; }
+.visaATMAmenities .visaATMREADY_LINK { background-position: -25px -1214px; }
+.visaATMAmenities .visaATMCHIP_CAPABLE {
+	background-image: url(../img/sprites.png) !important;
+	background-position: -17px -1365px; 
+}
+
+.visaATMFilters label.visaATMNO_ATM_ACCS_FEE_IND {
+	background: url(../img/amenities/NO_ATM_ACCS_FEE_IND.png) no-repeat 19px 5px;
+	background-size: 26px;
+	white-space: normal;
+    text-indent: -51px;
+    padding-left: 51px;
+    line-height: 1;
+}
+.visaATMFilters label.visaATMNO_ATM_ACCS_FEE_IND span {
+	font-size: 10px;
+}
+.visaATMAmenities li.visaATMNO_ATM_ACCS_FEE_IND {
+	background: url(../img/amenities/NO_ATM_ACCS_FEE_IND.png) no-repeat -4px -1px;
+	background-size: auto 24px;
+}
+.visaATMFilters label.visaATMACPT_INTL_CRD_IND {
+	background: url(../img/amenities/ACPT_INTL_CRD_IND.png) no-repeat 21px 5px;
+	background-size: 18px;
+}
+.visaATMAmenities li.visaATMACPT_INTL_CRD_IND {
+	background: url(../img/amenities/ACPT_INTL_CRD_IND.png) no-repeat 0px 0px;
+	background-size: auto 20px;
+}
+
+.visaATMCardAcceptIconsDiv ul { list-style: none; }
+.visaATMCardAcceptIconsDiv ul li span {
+    float: left;
+    text-indent: -999999px;
+}
+.visaATMCardAcceptIcons li { float: left; }
+.visaATMCARD_ACCEPTVisa img { height:24px; }
+.visaATMCARD_ACCEPTPlus img { height:24px; }
+.visaATMCardAcceptIcons li:first-child { margin-left: 0 !important; }
+.visaATMCardAcceptIcons li:last-child { border-right: 0; }
+
+.visaDrivingPlace li { float: none; }
+.visaATMLocation { margin: -5px 0 5px 0; }
+.visaATMLocation span { font-weight: bold; }
+.visaATMSort { font-size: 12px;  padding: 10px; }
+.visaATMSort button { border: none; font: inherit; background: none; display: inline; color: #7f91cf; cursor: pointer; border-left: 1px solid #CCC; padding-right: 10px; background: #fafaf8 url(../img/sprites.png) no-repeat right -770px; }
+.visaATMSort button:first-child { border: none; }
+.visaATMSort button span { display: block; margin: 0 3px; }
+.visaATMSort button:first-child span { margin-left: 0; }
+.visaATMSort button.visaATMSortCurrent span { border-bottom: 2px solid #FFA000; font-weight: bold; color: #000; }
+.visaATMSort button:hover { color: #0023a0;/*  background: #fff url(../img/sprites.png) no-repeat right -773px; */
+}
+.visaATMSort .visaATMSortCurrent { background: #FCFBFA url(../img/sprites.png) no-repeat right -693px; padding-right: 14px; }
+.visaATMSortReverse .visaATMSortCurrent { background: #FCFBFA url(../img/sprites.png) no-repeat right -654px; padding-right: 14px; }
+.visaATMSort .visaATMSortNoReverse,
+.visaATMSort .visaATMSortNoReverse:hover { background: none; padding-right: 8px; }
+.visaATMSort .visaATMSortCurrent.visaATMSortNoReverse,
+.visaATMSort .visaATMSortCurrent.visaATMSortNoReverse:hover { background: none; padding-right: 5px; }
+.visaATMResultsRight { float: right; margin-right: 5px; margin-top: 55px; width: 130px; text-align: right; font-size: 11px; }
+#hideshowbutton a { display: block;
+    height: 14px;
+    margin: 0;
+    width: 7px; }
+/* #hideshowbutton a.arrowanimate {background-image: url('../img/arrow-right.png'); display: block; height: 14px; width: 10px;} */
+.visaATMDirectionsSignIcon {height:25px; cursor: pointer;}
+a.visaDirections {
+	background:url('../img/directions.jpg') no-repeat; 
+	width: 112px; height:26px; float:right; text-indent:-999999px;
+}
+a.visaDirections.visaDirectionChineseS {
+	background:url('../img/direction-chineseS.jpg') no-repeat; 
+}
+a.visaDirections.visaDirectionChineseT {
+	background:url('../img/direction-chineseT.jpg') no-repeat; 
+}
+a.visaDirections.visaDirectionFrench {
+	background:url('../img/direction-french.jpg') no-repeat; 
+}
+a.visaDirections.visaDirectionJapanese {
+	background:url('../img/direction-japanese.jpg') no-repeat; 
+}
+a.visaDirections.visaDirectionKorean {
+	background:url('../img/direction-korean.jpg') no-repeat; 
+}
+a.visaDirections.visaDirectionPortuguese {
+	background:url('../img/direction-portuguese.jpg') no-repeat; 
+}
+a.visaDirections.visaDirectionSpanish {
+	background:url('../img/direction-spanish.jpg') no-repeat; 
+}
+a.visaDirections.visaDirectionThailand {
+	background:url('../img/direction-thailand.jpg') no-repeat; 
+}
+ a.visaDetails { background:url('../img/details.jpg') no-repeat; width:88px; height:26px; float:right; text-indent:-999999px;}
+ /*a.visaDirections:hover {background:url('../img/directions_down.jpg') no-repeat; width:112px; height:26px; float:right; text-indent:-999999px;}*/
+ a.visaDetails:hover { background:url('../img/details_down.jpg') no-repeat; width:88px; height:26px; float:right; text-indent:-999999px;}
+.visaATMTotalATMSFoundDiv { float: left; padding: 10px 0px 0px 23px; width: 347px; background: url(../img/blendbg.png) repeat-x top; }
+.visaATMTotalATMSFound{padding: 4px;}
+.visaATMSearchedValue p{ font-size: 18px; padding: 10px 0 0 10px;}
+.visaATMPinBullet { background: url(../img/pushpin.png) 0 center no-repeat; color: #fff; font-size: 13px; display: block; width: 26px; height: 40px; padding-top: 12px; text-align: center; position: absolute; left: 5px; top: 10px;}
+.visaATMResultListItem:hover .visaATMPinBullet { background: url(../img/pushpin-active.png) 0 center no-repeat; }
+.visaATMPagination { height: auto !important; /*float: left;*/ width: 336px; list-style: none; font-size: 11px; margin: 30px 15px 15px !important; }
+.visaATMPagination li { float: left; margin-left: 10px; margin-top: 0px; }
+.visaATMPagination a { color: #FFA000; }
+.visaATMDirections { }
+.visaATMDirections ol { list-style-type: none; margin: 0 !important; padding-left: 0 !important; color: #000; height: 160px; overflow: auto; }
+.visaATMDirections li { font-size: 12px; list-style-type: none; clear: both; }
+.visaATMDirections ol li:first-child { margin-top: 15px; }
+.visaATMDirections span { float: left; }
+.visaATMDirectionsNumber,
+.visaATMDirectionsStart,
+.visaATMDirectionsFinish { color: #0023A0; font-size: 11px; background: url(../img/shellDirections.png) no-repeat transparent 12px 30px; width: 49px; height: 26px; }
+.visaATMDirectionsStart { background-position: 0 -1159px; height: 31px; margin-bottom: 10px; }
+.visaATMDirectionsFinish { background-position: 0 -1127px; height: 31px; }
+/* Direction Icons, some do not have specific icons in the sprite. */
+.visaATM_None { }
+.visaATM_Unknown { }
+.visaATM_DepartStart { }
+.visaATM_DepartIntermediateStop { }
+.visaATM_DepartIntermediateStopReturning { }
+.visaATM_ArriveFinish { }
+.visaATM_ArriveIntermediateStop { }
+.visaATM_TurnLeft { background-position: 12px -213px; }
+.visaATM_TurnRight { background-position: 12px -162px; }
+.visaATM_TurnBack { }
+.visaATM_UTurn { background-position: 12px -587px; }
+.visaATM_TurnToStayLeft { }
+.visaATM_TurnToStayRight { }
+.visaATM_BearLeft { background-position: 12px -637px; }
+.visaATM_BearRight { background-position: 12px -686px; }
+.visaATM_KeepToStayLeft { background-position: 12px -537px; }
+.visaATM_KeepToStayRight { background-position: 12px -512px; }
+.visaATM_KeepToStayStraight { background-position: 12px -188px; }
+.visaATM_KeepLeft { background-position: 12px -537px; }
+.visaATM_KeepRight { background-position: 12px -512px; }
+.visaATM_KeepStraight { background-position: 12px -188px; }
+.visaATM_Take { }
+.visaATM_TakeRampLeft { background-position: 12px -262px; }
+.visaATM_TakeRampRight { background-position: 12px -237px; }
+.visaATM_TakeRampStraight { }
+.visaATM_KeepOnrampLeft { }
+.visaATM_KeepOnrampRight { }
+.visaATM_KeepOnrampStraight { }
+.visaATM_Merge { background-position: 12px -312px; }
+.visaATM_Continue { }
+.visaATM_RoadNameChange { }
+.visaATM_EnterRoundabout { background-position: 12px -387px; }
+.visaATM_ExitRoundabout { background-position: 12px -462px; }
+.visaATM_TurnRightThenTurnRight { }
+.visaATM_TurnRightThenTurnLeft { }
+.visaATM_TurnRightThenBearRight { }
+.visaATM_TurnRightThenBearLeft { }
+.visaATM_TurnLeftThenTurnLeft { }
+.visaATM_TurnLeftThenTurnRight { }
+.visaATM_TurnLeftThenBearLeft { }
+.visaATM_TurnLeftThenBearRight { }
+.visaATM_BearRightThenTurnRight { }
+.visaATM_BearRightThenTurnLeft { }
+.visaATM_BearRightThenBearRight { }
+.visaATM_BearRightThenBearLeft { }
+.visaATM_BearLeftThenTurnLeft { }
+.visaATM_BearLeftThenTurnRight { }
+.visaATM_BearLeftThenBearRight { }
+.visaATM_BearLeftThenBearLeft { }
+.visaATM_RampThenHighwayRight { }
+.visaATM_RampThenHighwayLeft { }
+.visaATM_RampToHighwayStraight { }
+.visaATM_EnterThenExitRoundabout { }
+.visaATM_BearThenMerge { }
+.visaATM_TurnThenMerge { }
+.visaATM_BearThenKeep { }
+.visaATM_Transfer { }
+.visaATM_Wait { }
+.visaATM_TakeTransit { background-position: 12px -487px; }
+.visaATM_Walk { background-position: 12px -411px; }
+.visaATMDirectionsText { width: 220px; margin-bottom: 15px; }
+.visaATMDirectionsDistance { display: block; float: right; width: 50px; margin-left: 10px; }
+.visaATMDirectionsAction { }
+.visaATMDirectionsRoadName { font-weight: bold; }
+.visaATMDirectionsToward { font-weight: bold; }
+.visaATMDirectionsWaypointName { font-weight: bold; }
+.visaATMDistance { }
+.visaATMScoreKm { display: none; }
+/* print pages */
+
+.visaATMStaticMap { position: absolute; display: none; }
+.visaATMPrintResults { position: relative; }
+.visaATMPrintResults ol { height: auto !important; }
+/* map controls */
+.NavBar_compassControlContainer { background: none !important; top: 20px !important; left: 1175px !important; }
+.NavBar_compassControlContainer .NavBar_compassFlat { background-image: url(../img/custom_map_controls.png) !important; background-position: -104px -2px !important; height: 45px !important; width: 45px !important; text-indent: -9999px; }
+.NavBar_zoomControlContainer { background: none !important; top: 31px !important; left: 1135px !important; width: 58px !important; height: 30px !important; }
+.NavBar_zoomControlContainer .NavBar_zoomOut { background-image: url(../img/custom_map_controls.png) !important; background-position: -3px -11px !important; width: 27px !important; height: 27px !important; }
+.NavBar_zoomControlContainer .NavBar_zoomIn { background-image: url(../img/custom_map_controls.png) !important; background-position: -41px -11px !important; width: 27px !important; height: 27px !important; }
+.NavBar_zoomControlContainer .NavBar_zoomDrop { left: 2px !important; }
+/* directions page new added css*/
+
+b.visaATMDirectionsBoldStart {
+	background: none repeat scroll 0 0 #168b24;
+    border-radius: 26px 26px 26px 26px;
+    color: #FFFFFF;
+    float: left;
+    font-size: 11px;
+    margin: 0 6px 0 0;
+    padding: 2px 0;
+    text-align: center;
+    width: 20px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+     border-radius: 25px;
+}
+    
+/* b.visaATMDirectionsBoldFinish { background: url("../img/b.png") no-repeat scroll 0 0 transparent;
+    float: left;
+    height: 20px;
+    margin: -4px 2px 0 0;
+    text-indent: -99999px;
+    width: 20px;
+    }
+ */
+ 
+ b.visaATMDirectionsBoldFinish {
+	background: none repeat scroll 0 0 #bf0b12;
+    border-radius: 26px 26px 26px 26px;
+    color: #FFFFFF;
+    float: left;
+    font-size: 11px;
+     margin: -4px 2px 0 0;
+    padding: 2px 0;
+    text-align: center;
+    width: 20px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+     border-radius: 25px;
+}
+
+/* for search result hint buttons*/
+
+.visaATMShowSearchResultsHintButton{ 
+	position: absolute;
+	top:10px;
+	right:10px;
+	float: left;
+	margin: 30px 0 0 0 !important;
+	background: url(../img/help_icon.png) no-repeat transparent; 
+	width: 31px; 
+	height: 31px; 
+	margin: 0;
+	padding: 0;
+	text-indent: -9999px;
+}
+
+.visaATMShowSearchResultsHintDiv{
+	display: none;
+	position: absolute;
+	padding: 20px;
+	top: 5%;
+	left: 72%;
+	background: url(../img/help_popup.png) no-repeat transparent;
+	height: 193px;
+	width: 198px;
+	z-index: 999999;
+	}
+	
+.visaATMShowSearchResultsHintDivCloseButton {
+	background: url(../img/help_cross.jpg) no-repeat transparent;
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	right: 4px;
+	top: 10px;
+}

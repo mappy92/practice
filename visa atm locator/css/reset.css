@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.visaATMWrapper * {
+  margin: 0;
+  padding: 0;
+/*  font-weight: normal; */
+}
+
+.visaATMWrapper strong {font-weight: bold;}
+
+.visaATMWrapper {
+  font-size: 14px;
+}

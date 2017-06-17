@@ -3,32 +3,32 @@
         <script>
             function showName (firstName, lastName) {
                 var nameIntro = "Your name is ";
-                    // this inner function has access to the outer function's variables, including the parameter
+                // this inner function has access to the outer function's variables, including the parameter
                 function makeFullName () {
-                return nameIntro + firstName + " " + lastName;
+                    return nameIntro + firstName + " " + lastName;
                 }
 
                 return makeFullName ();
+            }
+            console.log(showName("Michael", "Jackson")); // Your name is Michael Jackson
+
+
+
+            function celebrityName (firstName) {
+                var nameIntro = "This celebrity is ";
+                // this inner function has access to the outer function's variables, including the parameter
+                function lastName (theLastName) {
+                    return nameIntro + firstName + " " + theLastName;
                 }
-                console.log(showName("Michael", "Jackson")); // Your name is Michael Jackson
+                return lastName;
+            }
 
+            var mjName = celebrityName ("Michael"); // At this juncture, the celebrityName outer function has returned.
+            console.log(mjName);
 
-
-                function celebrityName (firstName) {
-                    var nameIntro = "This celebrity is ";
-                    // this inner function has access to the outer function's variables, including the parameter
-                   function lastName (theLastName) {
-                        return nameIntro + firstName + " " + theLastName;
-                    }
-                    return lastName;
-                }
-
-                var mjName = celebrityName ("Michael"); // At this juncture, the celebrityName outer function has returned.
-                console.log(mjName);
-
-                // The closure (lastName) is called here after the outer function has returned above
-                // Yet, the closure still has access to the outer function's variables and parameter
-                mjName ("Jackson"); // This celebrity is Michael Jackson
+            // The closure (lastName) is called here after the outer function has returned above
+            // Yet, the closure still has access to the outer function's variables and parameter
+            mjName ("Jackson"); // This celebrity is Michael Jackson
 
 
 
@@ -38,15 +38,15 @@
 
                 return {
                     setId : function(newId){
-                         id = newId ;
+                        id = newId ;
                     },
                     getId : function (){
-                    return id;
-                }
+                        return id;
+                    }
                 }
             }
 
-             var mjid = celebrityId();
+            var mjid = celebrityId();
 
             console.log(mjid.getId());
             mjid.setId(9090);
@@ -81,13 +81,127 @@
             var actionCelebs = [{name:"Stallone", id:0}, {name:"Cruise", id:0}, {name:"Willis", id:0}];
 
             var celebUniqueArr = celebsIdGenerator(actionCelebs);
-console.log(celebUniqueArr);
+            console.log(celebUniqueArr);
             var stalone = celebUniqueArr[0];
             console.log(stalone.id);// i is 3 at time of calling this
 
 
 
 
+            // MDN
+
+
+            function makeFunc() {
+                var name = 'Mozilla';
+                function displayName() {
+                    console.log(name);
+                }
+                return displayName;
+            }
+
+            var myFunc = makeFunc();
+            myFunc();
+
+
+
+
+            function makeAdder(x) {
+                return function(y) {
+                    return x + y;
+                };
+            }
+
+            var add5 = makeAdder(5);
+            var add10 = makeAdder(10);
+
+            console.log(add5(2));  // 7
+            console.log(add10(2)); // 12
+
+
+
+
+            var counter = (function() {
+                var privateCounter = 0;
+                function changeBy(val) {
+                    privateCounter += val;
+                }
+                return {
+                    increment: function() {
+                        changeBy(1);
+                    },
+                    decrement: function() {
+                        changeBy(-1);
+                    },
+                    value: function() {
+                        return privateCounter;
+                    }
+                };
+            })();
+
+            console.log(counter.value()); // logs 0
+            counter.increment();
+            counter.increment();
+            console.log(counter.value()); // logs 2
+            counter.decrement();
+            console.log(counter.value()); // logs 1
+
+
+
+            function showHelp(help) {
+                document.getElementById('help').innerHTML = help;
+            }
+
+            function makeHelpCallback(help) {
+                return function() {
+                    showHelp(help);
+                };
+            }
+
+
+            function setupHelp() {
+                var helpText = [
+                    {'id': 'email', 'help': 'Your e-mail address'},
+                    {'id': 'name', 'help': 'Your full name'},
+                    {'id': 'age', 'help': 'Your age (you must be over 16)'}
+                ];
+
+                for (var i = 0; i < helpText.length; i++) {
+                    var item = helpText[i];
+                    document.getElementById(item.id).onfocus = makeHelpCallback(item.help);/*function() {
+                        showHelp(item.help);
+                    }*/
+                }
+            }
+
+            setupHelp();
+
+
+
+            // other way out
+
+            /*
+            function showHelp(help) {
+                document.getElementById('help').innerHTML = help;
+            }
+
+            function setupHelp() {
+                var helpText = [
+                    {'id': 'email', 'help': 'Your e-mail address'},
+                    {'id': 'name', 'help': 'Your full name'},
+                    {'id': 'age', 'help': 'Your age (you must be over 16)'}
+                ];
+
+                for (var i = 0; i < helpText.length; i++) {
+                    (function() {
+                        var item = helpText[i];
+                        document.getElementById(item.id).onfocus = function() {
+                            showHelp(item.help);
+                        }
+                    })(); // Immediate event listener attachment with the current value of item (preserved until iteration).
+                }
+            }
+
+            setupHelp();*/
 
 
 
@@ -96,7 +210,53 @@ console.log(celebUniqueArr);
 
 
 
+            function MyObject(name, message) {
+                this.name = name.toString();
+                this.message = message.toString();
+                this.getName = function() {
+                    return this.name;
+                };
 
+                this.getMessage = function() {
+                    return this.message;
+                };
+            }
+            // redefining not recommended
+
+           /* function MyObject(name, message) {
+                this.name = name.toString();
+                this.message = message.toString();
+            }
+            MyObject.prototype = {
+                getName: function() {
+                    return this.name;
+                },
+                getMessage: function() {
+                    return this.message;
+                }
+            };*/
+
+
+            /*function MyObject(name, message) {
+                this.name = name.toString();
+                this.message = message.toString();
+            }
+            (function() {
+                this.getName = function() {
+                    return this.name;
+                };
+                this.getMessage = function() {
+                    return this.message;
+                };
+            }).call(MyObject.prototype);*/
         </script>
     </head>
+    <body>
+        <p id="help">Helpful notes will appear here</p>
+        <p>E-mail: <input type="text" id="email" name="email"></p>
+        <p>Name: <input type="text" id="name" name="name"></p>
+        <p>Age: <input type="text" id="age" name="age"></p>
+
+
+    </body>
 </html>

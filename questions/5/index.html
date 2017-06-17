@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script>
+            // polyfill for isArray
+            if(!Array.isArray){
+                Array.prototype.isArray = function(arg){
+                    return Object.prototype.toString.call(arg) == "[object array]";
+                }
+            }
+
+
+
+            var iframe = document.createElement('iframe');
+            document.body.appendChild(iframe);
+            xArray = window.frames[window.frames.length-1].Array;
+            var arr = new xArray(1,2,3); // [1,2,3]
+
+            // Correctly checking for Array
+            Array.isArray(arr);  // true
+            // Considered harmful, because doesn't work though iframes
+            arr instanceof Array; // false
+
+
+            // Attempt #1: using typeof
+            // fails in all cases since typeof [] returns "object"
+            Array.prototype.isArray = function(obj) {
+                return (typeof obj === "array");
+            }
+
+            // Attempt #2: using instanceof
+            // fails when obj = Array.prototype
+            // and when array is defined in another window or frame
+            Array.prototype.isArray = function(obj) {
+                return (obj instanceof Array);
+            }
+
+            // Attempt #3: using object prototype.toString
+            // this works and is the actual ECMAScript 5.1 implementation
+            Array.prototype.isArray = function(obj) {
+                return Object.prototype.toString.call(obj) == "[object Array]";
+            }
+
+            // Attempt #4: using duck typing
+            // this works for the most part but is easily fooled
+            Array.prototype.isArray = function(obj) {
+                if (typeof arg === 'object' &&
+                    ('join' in arg && typeof arg.join === 'function') &&
+                    ('length' in arg && typeof arg.length === 'number')) {
+                    return true;
+                }
+                return false;
+            }
+
+
+
+        </script>
+    </head>
+</html>

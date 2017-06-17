@@ -1,0 +1,54 @@
+.visaATMWrapper ul {
+  list-style-type: none;
+}
+
+.visaATMContent p,
+.visaATMContent ul {
+  margin: .7em 0;
+  line-height: 1.4;
+}
+
+.visaATMContent a {
+  color: #0023a0;
+  text-decoration: none;
+}
+
+a.visaATMBackToResults {
+	font-size: 18px;
+	color: rgb(255, 156, 8);
+	text-decoration: none;
+	margin-left: -40px;
+	margin-top: -5px;
+}
+
+.visaATMPage ul {
+   list-style-type: disc;
+   padding-left: 0;
+   padding-top: 0;
+}
+
+.visaATMNoBullets {
+  list-style-type: none !important;
+}
+
+.visaATMWrapper h2 {
+  color: #ffa000;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.visaATMWrapper h3 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.visaATMWrapper h4 {
+  font-size: 16px;
+  font-weight: bold;
+/*  margin-bottom: 0; */
+}
+
+.visaATMWrapper h4 + * {
+  margin-top: 0;
+}

@@ -1,0 +1,131 @@
+img {border: 0 none;}
+
+#visaATMTarget { font-family: arial, sans-serif; color: #666; font-size: 14px; }
+
+.visaATMTitleBar { font-size: 14px; padding: 5px 10px 2px; color: #666; }
+
+.visaATMFooter { font-size: 12px; padding-left: 10px; position: relative; margin-top: 30px;}
+.visaATM_printFooterLogo {display: inline; position: absolute; right: 10px; top: -3px;}
+
+.visaATMDirectionsBold {font-weight: bold;}
+
+.visaATMPrintResults { position: relative; }
+
+.visaATMclear {clear: both;}
+
+.visaATMFooterVisaLink, .visaATMSearchWrap, .visaATMDirectionsSignIcon, .visaATMResultsRight, .visaATMSearchHint, .visaATMLocateNearby, .visaATM_OR, .visaATMMobileAppButton, .visaATMHeaderActions,
+.visaATMSubmit, .visaATMSearchLoading, .visaATMFilters, .visaATMBackToResults, .visaATMControlIcons, 
+.visaATMControlLinks, .visaATMPagination, .visaATMPinBullet, .visaATMDirectionType li, .visaATMGoButton, .visaATMNav {
+		display: none;
+	}
+
+.visaATMResultsMap {
+	display: block; 
+	page-break-inside: avoid;
+	width: 1264px;
+	height: 730px;
+}
+.visaATMSort {display: none;}
+.visaATMStaticMap {
+	margin-top: 20px; 
+	/*display: block !important;*/
+	display: none;
+}
+.visaATMDirectionType { margin: 0; padding: 0;}
+.visaATMDirectionType li.current {margin: 0; padding: 0; display: block;}
+
+div {border: none;}
+
+/* amenities */
+.visaATMResultListItem { padding: 15px 5px 5px 5px;
+border-width: 0 0 2px 0;
+border-style: dotted;
+border-color: #CCCCCC;
+}
+
+
+.visaATMAmenities { /* padding: 0 0 14px 0 !important; */ width: 250px !important; padding-left: 0 !important;}
+.visaATMAmenities li {
+	float: left; width: 31px; height: 21px;
+	background: none;
+	margin-left: 10px;
+	margin-bottom: 10px;
+	list-style: none;
+	display: block;
+	width: 41px;
+	border-right: 1px solid #CCC;
+}
+
+.visaATMAmenities li span {text-indent: -9999px; position: absolute; top: 0; left: -9999px;}
+
+.visaATMDrivingPlace .visaATMAmenities li { border-right: 0; margin-left: 0; }
+
+.visaATMAmenities li:first-child { margin-left: 0 !important; }
+.visaATMAmenities li:last-child { border-right: 0; }
+
+.visaATM_FilterImage {display:inline;}
+.visaATMScore { font-weight: bold; margin-bottom: 0; padding-bottom: 0;}
+.visaATMPlaceName {margin-top: 0; padding-top: 0; color: #0023a0;}
+
+
+.visaATMAmenities_Title { text-indent: 0px !important; width: auto !important; padding-right: 10px; }
+
+/* directions */
+.visaATMDirections {}
+.visaATMDirections ol { list-style-type: none; margin: 0 !important; padding-left: 0 !important; color: #000; }
+.visaATMDirections li { font-size: 12px;  list-style-type: none; display: list-item; clear:both; min-height: 26px;}
+.visaATMDirections ol li:first-child { margin-top: 15px;}
+.visaATMDirections span { /* display: block; */}
+.visaATM_DirectionsImage {display: inline; vertical-align: top; margin-left: 5px;}
+
+.visaATMDirectionsStart, .visaATMDirectionsFinish { display: block; width: 50px; float: left; }
+.visaATMDirectionsStart img, .visaATMDirectionsFinish img {margin-left: 0; margin-bottom: 0;}
+
+.visaATMDirectionsStartAddress input {display: none;}
+.visaATMDirectionType {font-style: italic; font-weight: bold;}
+.visaATMDirectionFields {padding-top: 10px; }
+
+.visaATMDirectionsEndAddress {page-break-after: always;}
+
+.visaATMHoursOfOperation {margin-top: 0;}
+
+.visaATM_PrintSpan {display: inline;}
+
+.visaATMDirectionsNumber{
+    color: #0023A0;
+    font-size: 11px;
+    background: none;
+    width: 20px;
+    width: 49px;
+    height: 26px;
+    float: left;
+    display: block;
+}
+
+.visaATMDirectionsText {
+	width: 400px;
+	margin-bottom: 15px;
+	float: left;
+	display: block;
+}
+.visaATMDirectionsDistance {
+	display: block;
+	float: left;
+	width: 50px;
+	margin-left: 10px;
+}
+
+.visaATMDirectionsAction {}
+.visaATMDirectionsRoadName { font-weight: bold; }
+.visaATMDirectionsToward { font-weight: bold; }
+.visaATMDirectionsWaypointName { font-weight: bold; }
+.visaATMDistance {}
+
+.visaATMResultsDirections {margin-bottom: 50px;}
+
+.visaATMShowHintDiv {
+	display: none;
+}
+.visaATMShowSearchResultsHintDiv {
+	display: none;
+}

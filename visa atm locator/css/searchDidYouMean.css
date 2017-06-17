@@ -1,0 +1,37 @@
+.visaATMSearchDidYouMean {
+  border: solid 1px #999;
+  left: 0px;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  top: 29px;
+  width: 92%;
+  z-index: 99;
+  background: #fff;
+  -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+     -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+      -ms-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+       -o-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.visaATMSearchDidYouMean a,
+.visaATMDidYouMeanTitle {
+  padding: 5px 10px;
+}
+
+.visaATMDidYouMeanTitle {
+  background: #f2f2f2;
+  color: #666;
+}
+
+.visaATMSearchDidYouMean a {
+  color: #000;
+  display: block;
+  text-decoration: none;
+}
+
+.visaATMSearchDidYouMean a:hover,
+.visaATMHintSelected {
+  background: #b2bde3;
+}

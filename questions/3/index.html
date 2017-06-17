@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <script>
+            function mul(z){
+                console.log("z :: "+z);
+                return function(y){
+                    console.log("y :: "+y);
+                    return function(x){
+                        console.log("x :: "+x);
+                        return x*y*z;
+                    }
+                }
+            }
+            console.log(mul(5)(6)(7));
+
+
+            // method chaining
+
+            // define the class
+            var Kitten = function() {
+                this.name = 'Garfield';
+                this.color = 'brown';
+                this.gender = 'male';
+            };
+
+            Kitten.prototype.setName = function(name) {
+                this.name = name;
+            };
+
+            Kitten.prototype.setColor = function(color) {
+                this.color = color;
+            };
+
+            Kitten.prototype.setGender = function(gender) {
+                this.gender = gender;
+            };
+
+            Kitten.prototype.save = function() {
+                console.log(
+                    'saving ' + this.name + ', the ' +
+                    this.color + ' ' + this.gender + ' kitten...'
+                );
+
+                // save to database here...
+            };
+
+
+
+
+            var bob = new Kitten();
+
+            bob.setName('Bob');
+            bob.setColor('black');
+            bob.setGender('male');
+
+            bob.save();
+
+            // OUTPUT:
+            // > saving Bob, the black male kitten...
+
+
+            var bob = new Kitten();
+
+            // bob.setName('Bob').setColor('black');
+
+            // ERROR:
+            // > Uncaught TypeError: Cannot call method 'setColor' of undefined
+
+
+            var bob = new Kitten();
+
+            var tmp = bob.setName('Bob');
+            //tmp.setColor('black');
+
+            // ERROR:
+            // > Uncaught TypeError: Cannot call method 'setColor' of undefined
+
+
+
+
+            // define the class
+            var Kitten = function() {
+                this.name = 'Garfield';
+                this.color = 'brown';
+                this.gender = 'male';
+            };
+
+            Kitten.prototype.setName = function(name) {
+                this.name = name;
+                return this;
+            };
+
+            Kitten.prototype.setColor = function(color) {
+                this.color = color;
+                return this;
+            };
+
+            Kitten.prototype.setGender = function(gender) {
+                this.gender = gender;
+                return this;
+            };
+
+            Kitten.prototype.save = function() {
+                console.log(
+                    'saving ' + this.name + ', the ' +
+                    this.color + ' ' + this.gender + ' kitten...'
+                );
+
+                // save to database here...
+
+                return this;
+            };
+
+
+            ///////////////////
+            // WITHOUT CHAINING
+
+            var bob = new Kitten();
+
+            bob.setName('Bob');
+            bob.setColor('black');
+            bob.setGender('male');
+
+            bob.save();
+
+            // OUTPUT:
+            // > saving Bob, the black male kitten...
+
+
+            ///////////////////
+            // WITH CHAINING
+
+            new Kitten()
+                .setName('Bob')
+                .setColor('black')
+                .setGender('male')
+                .save();
+
+            // OUTPUT:
+            // > saving Bob, the black male kitten...
+        </script>
+    </head>
+</html>

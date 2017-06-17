@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script>
+            //method 1
+            var arr1 = ['a','b','c','d','e','f'];
+            var arr2 = arr1;  // Reference arr1 by another variable
+            arr1 = [];
+            console.log(arr2); // Output ['a','b','c','d','e','f']
+
+            // method 2 // efficient contrary
+            var A = [];
+            A.length = 0;
+
+            // method 3 // best contrary
+            A.splice(0,A.length)
+
+            // method 4 contrary
+
+            while(A.length > 0) {
+                A.pop();
+            }
+
+
+
+        </script>
+    </head>
+</html>

@@ -1,0 +1,29 @@
+.visaATMSMS_Cancel { padding: 2px 6px; border-radius: 5px; background-color: #FFF; border: 1px solid #999; color: #000 !important; font-size: 11px; text-decoration: none; float:right; margin-right: 10px;}
+.visaATMSMS_Cancel:hover { text-decoration: none !important; }
+
+.visaATMSMS_Send { cursor: pointer; padding: 2px 6px; border-radius: 5px; background-color: #FFF; border: 1px solid #999; color: #000 !important; font-size: 11px; float: right;	text-decoration: none; }
+.visaATMSMS_Send:hover {text-decoration: none !important; }
+.visaATMSMSForm fieldset{ width:600px; border: none;  clear: left;}
+
+/* sms form */
+.visaATMSMSForm { float: left; margin: 100px auto; *margin-left: 100px; *margin-bottom: 100px; width: 700px; *margin-bottom:100px;}
+.visaATMSMSForm label {display: block; float: left; width: 200px; text-align: right; clear: both; font-weight: bold; margin-right: 10px; }
+.visaATMSMSForm select {display: block; float: left; width: 335px; text-align: left; height: 25px; margin-bottom: 10px;}
+.visaATMSMSForm input { width: 320px; text-align: left; height: 15px; padding: 5px; margin-bottom: 10px; }
+#reCaptcha {margin-left: 207px; clear: both; height:150px;}
+.visaATMSMSForm_TandC {margin-left: 207px; font-size: 12px; height: 40px}
+.visaATMSMSForm_TandC input {width: auto; margin-right: 10px; margin-top: 1px;}
+#captchaInputContainer{float: left;}
+.visaATMSMSForm_Submit { margin-left: 207px; *margin-bottom: 50px; width: 307px; }
+.visaATMSMSForm_Submit input { width: auto; float: right; padding: 1px 10px 5px 10px; border: 1px solid #999; background: none; height: 18px; border-radius: 5px; }
+.visaATMSMSForm_Submit button { }
+.visaATMSMSForm_TandCText {float: left; padding-top: 7px\0 !important; padding-top: 1px; margin-right: 5px;}
+.visaATMSMSForm_TandCTextLink {float: left; padding-top: 7px\0 !important; padding-top: 1px;}
+.visaATMSMSForm_TandCCheckbox {float: left;}
+#captchaControls .control {
+float: left;
+margin-right: 8px;
+font-weight: bold;
+}
+
+.visaATMresponse {float: left !important; text-align: left;}

@@ -1,0 +1,39 @@
+.visaATMFaqQuestions .visaATMFilters {padding-bottom: 30px !important;}
+.visaATMFaqQuestions .visaATMFilters li { width: 100% !important; min-height: auto;}
+.visaATMFaqQuestions .visaATMFilters label {padding-left: 40px; cursor:default; text-indent: 0;}
+
+.visaATMFaqQuestions .visaATMOPER_HRS {background-position: -10px -375px !important;}
+.visaATMFaqQuestions .visaATMWHEELCHAIR	{
+	background-image: url(../img/sprites.png) !important;
+	background-position: -10px -290px !important;
+}
+.visaATMFaqQuestions .visaATMBRAILLE_AUDIO																	{background-position: -10px -462px !important;}
+.visaATMFaqQuestions .visaATMACCEPTS_PLUS_SHARED_DEPOSIT {
+	background-image: url(../img/sprites.png) !important;
+	background-position: -10px -317px !important;
+}
+.visaATMFaqQuestions .visaATMBALANCE_INQUIRY															{background-position: -10px -403px !important;}
+.visaATMFaqQuestions .visaATMPIN_CHANGE																			{background-position: -10px -488px !important;}
+.visaATMFaqQuestions .visaATMPLUS_ALLIANCE_NO_SURCHARGE_FEE		{background-position: -10px -342px !important;}
+.visaATMFaqQuestions .visaATMV_PAY_CAPABLE																{background-position: -10px -432px !important;}
+.visaATMFaqQuestions .visaATMAIRPORT_CD															{ background-position: -10px -515px !important; }
+.visaATMFaqQuestions .visaATMREADY_LINK															{ background-position: -25px -1209px !important; }
+.visaATMFaqQuestions .visaATMCHIP_CAPABLE {
+	background-image: url(../img/sprites.png) !important;
+	background-position: -11px -1363px !important; 
+}
+
+.visaATMPage-faq .visaATMTogglee p {background-color: #FFF; }
+.visaATMPage-faq .visaATMFilters {background: none; position: relative;}
+.visaATMPage-faq .visaATMPage {	float: left; padding: 2%; width: 96%;}
+
+.visaATMFaqQuestions .visaATMFilters label.visaATMACPT_INTL_CRD_IND {
+	background: url(../img/amenities/ACPT_INTL_CRD_IND.png) no-repeat 5px 3px;
+    background-size: auto 19px;
+}
+.visaATMFaqQuestions .visaATMFilters label.visaATMNO_ATM_ACCS_FEE_IND {
+	background: url(../img/amenities/NO_ATM_ACCS_FEE_IND.png) no-repeat 0px 1px;
+    text-indent: 0;
+    padding-left: 40px;
+    background-size: auto 26px;
+}

@@ -1,0 +1,452 @@
+.visaATMclear { clear: both; }
+
+.visaATMMobileAppButton, .visaATMLocateNearby, .visaATM_OR { display: none; }
+
+/* #visaATMTarget {
+  background: url(../img/gradient.jpg) repeat-x 0px 72px;
+} */
+#visaATMTarget img {border: 0 none;}
+
+span.icon_clear {
+    position: absolute;
+    top: 5px;
+	right: 5px;
+	display: none; 
+	width: 20px;
+	height: 20px;
+	background: url("../img/close.png") no-repeat;
+	cursor: pointer;  
+    }
+
+span.deleteicon {
+	position: relative;
+	float: left;
+	}
+	
+span.deleteicon input {
+	padding-right: 16px;
+}
+	   
+
+.visaATMWrapper {
+  position: relative;
+  /* padding: 20px; */
+  /* width: 769px; */
+  margin: auto;
+  background: #fff;
+  font-family: arial, sans-serif;
+  color: #666;
+  /* background: url(../img/background.jpg) no-repeat center top; */
+  min-height: 400px;
+}
+
+.visaATMWrapper a {
+  cursor: pointer;
+}
+
+.visaATMPageTitle {margin-top: 10px;}
+
+.visaATMContent {
+	background-size: 770px 292px;
+ /*  padding-top: 110px; */
+}
+
+.visaATMBeforeRender .visaATMPage {
+  opacity: 0;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+}
+
+.visaATMPage {
+  position: relative;
+  z-index: 0;
+  /* padding: 20px 0; */
+  /* margin-left: 20px;
+  margin-right: 20px; */
+  margin-top: 10px;
+  width: 516px;
+  border-top: 2px dotted #ccc;
+  background: #fff;
+  opacity: 1;
+  -webkit-transition: opacity 400ms ease;
+  -moz-transition: opacity 400ms ease;
+  -ms-transition: opacity 400ms ease;
+  -o-transition: opacity 400ms ease;
+  
+}
+
+.visaATMHeader {
+  height: 60px;
+}
+
+.visaATMHeader .visaATMHeaderHomeLink {
+  width: 115px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.visaATMHeaderHomeLink {
+  	float: left;
+    left: 2px;
+    margin: 20px 0 0;
+}
+
+.visaATMShowHintButton { 
+	background: url(../img/help_icon.png) no-repeat transparent; 
+	width: 31px; 
+	height: 31px; 
+	margin: 0;
+	padding: 0;
+	text-indent: -9999px;
+}
+
+.visaATMHint {
+	width: 0%;
+float: left !important;
+}
+
+.visaATMShowHintDiv {
+	display: none;
+	position: absolute;
+	padding: 20px;
+	top: -23%;
+	left: 93%;
+	background: url(../img/help_popup.png) no-repeat transparent;
+	height: 193px;
+	width: 198px;
+	z-index: 999999;
+	}
+	
+.visaATMShowHintDivCloseButton {
+	background: url(../img/help_cross.jpg) no-repeat transparent;
+	position: absolute;
+	height: 22px;
+	width: 22px;
+	right: 4px;
+	top: 10px;
+}
+
+.visaATMWrapper a {
+  color: #999;
+}
+
+.visaATMHeaderActions {
+	float: right;
+  font-size: 10px;
+  margin: 20px 0 0;
+  /*display: none;*/
+}
+
+
+/* .visaATMHeaderActions #languageDropDown  {
+	background: url('../img/dropdown-bg.png') no-repeat;
+	font-size: 15px;
+    margin: 10px 0 0 5px;
+    padding: 5px 5px 8px 5px;
+    width: 179px;
+    border: none;
+}*/
+
+ 
+.visaATMHeaderActions #languageDropDown option{ text-indent:8px;}
+
+.visaATMHeaderActions p {
+  margin-top: 1em;
+}
+
+.visaATMTitleBar {
+	float: left;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 5px 0 0;
+    padding: 0 10px 0 0;
+    text-align: right;
+    display: block !important;
+}
+
+.visaATMSearch {
+  position: relative;
+  float: left;
+  margin: 30px 0 0 235px;
+  z-index: 99999;
+}
+
+.visaATMHeader a[href*="language:thailand"] + .visaATMSearch {
+  margin-left: 98px;
+}
+
+.visaATMSearchWrap {
+	position: relative;
+	background: url("../img/search_box.png") no-repeat scroll left top transparent;
+	float: left;
+	width: 444px;
+}
+
+.visaATMSearchWrap input {
+  display: block;
+  background: transparent;
+  border: none;
+  float: left;
+  width: 382px;
+  height: 20px;
+  padding: 4px 10px;
+  font-size: 13px;
+  outline: none;
+  color: #666;
+  line-height: 20px;
+}
+
+.visaATMSearchLoading {
+  position: absolute;
+  right: 85px;
+  top: 9px;
+  display: none;
+}
+.loadingImage{
+	padding-top: 30px;
+	padding-left: 120px;
+}
+.visaATMSearchFetching .visaATMSearchLoading {
+  display: block;
+}
+
+.visaATMSearchHint {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.visaATMPage-home .visaATMSearchHint {
+	width: 520px;
+  text-align: center;
+}
+
+.visaATMSubmit {
+  background: url("../img/search-btn.png") no-repeat scroll left top transparent;
+    border: medium none;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 33px;
+    margin: 0;
+    padding: 0;
+    width: 34px;
+}
+
+.visaATMSubmit:hover {
+  opacity: 1.0;
+  filter: alpha(80);
+}
+
+.visaATMSubmit:active {
+  opacity: 1;
+  filter: alpha(100);
+}
+
+.visaFooterPlusAlliance {
+  /*display: none;*/
+  display: block;
+  overflow: hidden;
+  clear: both;
+  padding-top: 10px;
+  text-align: center;
+}
+.visaFooterPlusAlliance .logos {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto; 
+  max-width: 510px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+.visaFooterPlusAlliance .logosLeft {
+  float: left;
+}
+.visaFooterPlusAlliance .logosRight {
+  float: left;
+}
+.visaFooterPlusAlliance .logosRight .logoContainer:last-child {
+  margin-right: 0;
+}
+.visaFooterPlusAlliance .logoContainer {
+  display: inline-block;
+  height: 40px;
+  margin-right: 25px;
+}
+.visaFooterPlusAlliance .logoContainer img {
+  height: 100%;
+}
+
+.visaATMFooter {
+  float: left;
+  top: 850px;
+  width: 96%;
+  color: #999;
+  font-size: 10px;
+  padding: 1% 2%;
+  border-top: solid 1px #ccc;
+  clear: both;
+}
+
+.visaATMFooterVisaLink {
+  float: right;
+}
+
+.visaATMNav {
+  height: 20px;
+  line-height: 20px;
+  margin-top: 10px;
+}
+
+.visaATMNav li {
+  float: left;
+  padding: 0px 6px;
+  background: url(../img/sprites.png) no-repeat right top;
+}
+
+.visaATMNav .first {
+  padding-left: 0;
+}
+
+.visaATMNav .last {
+  background: none;
+}
+
+.visaATMNavHomeShow {display: none;}
+
+.visaATMFooter .visaATMNav {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+/* location results page individual */
+
+.visaATMFlagPin { 
+width: 35px !important;
+}
+
+.visaATMFlagPin img {
+	position: absolute;
+	top: 16px;
+	left: 0px;
+}
+
+.visaATMFlagPin div {
+	top: 22px !important;
+	left: -1px !important;
+}
+
+.visaATMBackToResults {
+	font-size: 12px;
+	position: absolute;
+	top: -25px;
+	left: 0;
+}
+
+.visaATMDrivingPlace {
+	position: relative;
+	margin: 35px 0 0 30px;
+}
+
+.visaATMDrivingPlace .visaATMPinBullet {
+	top: -5px;
+	left: -40px;
+}
+
+.visaATMDirectionFields input {
+	 background: url("../img/inner-search-bg.png") no-repeat scroll 0 0 transparent;
+    border: medium none;
+    color: #666666;
+    font-size: 12px;
+    height: 21px;
+    padding-left: 10px;
+    width: 300px;
+}
+
+.visaATMDirectionsBold {
+	font-weight: bold;
+}
+
+.visaATMDirectionsStartAddress { margin-top: 5px !important; margin-bottom: 12px !important;}
+.visaATMDirectionsEndAddress {
+	width: 342px;
+	margin-top: 10px !important;
+}
+
+.visaATMDirectionsEndAddress span {
+	display: block;
+	float: right;
+	text-align: left;
+	width: 312px;
+	font-size: 12px;
+}
+
+.visaATMDirectionsGo {
+/*	text-align: right; */
+	width: 345px;
+}
+
+
+
+/* CSS Document */
+
+/* * { margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; } */
+ul.idealSelect li { padding: .4em .8em; }
+ul.idealSelect div li,
+ul.idealSelect { float: left; display: inline-block; cursor: pointer; font-size: 12px; }
+ul.idealSelect ul { /* Dropdown */ visibility: hidden; position: absolute; z-index: 999; top: 48px; right: 0; background: #e9e9e9; border: 1px solid #d4d5d6; color: #696969; width: 158px; list-style: none !important; list-style-position: outside !important; float: left; }
+ul.idealSelect { background: url(../img/customdropdown.png) no-repeat; width: 179px; height: 30px!important; margin: 5px 0; }
+ul.idealSelect div li { color: #696969; line-height: 20px; font-size: 12px; }
+ul.idealSelect ul li:hover { background: #feffff; cursor: pointer; }
+
+/*  mi, km buttons on directions   */
+.Direction_visaATMControlLinks button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+.Direction_miles {
+	float: right;
+	position: relative;
+	right: 0px;
+	top: -39px;
+	right: 85px;
+	*top: -36px !important;
+}
+.Direction_kilometers {
+	float: right;
+	position: relative;
+	right: 0px;
+	top: -39px;
+	right: 39px;
+	*top: -36px !important;
+}
+.visaATMDirectionContolLinksSeparator { 
+	padding-left: 1px;
+	padding-right: 1px;
+	float: right;
+	position: relative;
+	right: 0px;
+	top: -39px;
+	*top: -36px !important;
+	right: 63px;}
+.Direction_visaATMControlLinks button span.visaATMSortCurrent{ font-weight: bold; }
+
+/*plus alliance filter;*/
+.plusAlliance-input-wrapper {
+  clear: both;
+  display: block;
+  margin-left: 519px;
+  margin-top: 10px;
+}
+.visaATMPage-home .visaATMContent {
+  margin-top: -10px;
+}
+
+.info-box-plus-alliance {
+  width: 12px;
+  margin-left: 5px;
+  top: -4px;
+  position: relative;
+}
